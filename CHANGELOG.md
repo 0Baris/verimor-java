@@ -1,0 +1,19 @@
+# Değişiklik günlüğü / Changelog
+
+Bu proje [Semantic Versioning](https://semver.org/) kullanır. / This project follows Semantic Versioning.
+
+## 0.1.0 - Yayın adayı / Release candidate
+
+- Java 11+ ve Kotlin için SMS, Switch ve WhatsApp istemcileri.
+- Alan servisleri ve `raw()` erişimiyle 68 operasyonun tamamı.
+- HTTP hata normalizasyonu, 30 saniyelik zaman aşımı ve otomatik tekrar içermeyen güvenli varsayılanlar.
+- Offline sözleşme, localhost, paket içeriği ve temiz Java/Kotlin consumer testleri.
+
+Canlı Verimor servisi doğrulaması ve Maven Central yayını henüz yapılmamıştır.
+
+- SMS, Switch and WhatsApp clients for Java 11+ and Kotlin.
+- All 68 operations through domain services and `raw()` access.
+- HTTP error normalization, a 30-second timeout and no automatic retries.
+- Offline contract, localhost, package-content and clean Java/Kotlin consumer tests.
+
+Live Verimor validation and Maven Central publication have not been performed yet.

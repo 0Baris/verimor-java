@@ -1,0 +1,478 @@
+[
+  {
+    "method": "DELETE",
+    "operationId": "delete_v2_blacklists_id",
+    "path": "/v2/blacklists/{id}",
+    "product": "sms",
+    "proxy": "blacklist.deleteBlacklistEntry"
+  },
+  {
+    "method": "GET",
+    "operationId": "getSmsStatus",
+    "path": "/v2/status",
+    "product": "sms",
+    "proxy": "reports.status"
+  },
+  {
+    "method": "GET",
+    "operationId": "get_v2_balance",
+    "path": "/v2/balance",
+    "product": "sms",
+    "proxy": "balances.balance"
+  },
+  {
+    "method": "GET",
+    "operationId": "get_v2_blacklists",
+    "path": "/v2/blacklists",
+    "product": "sms",
+    "proxy": "blacklist.listBlacklistEntries"
+  },
+  {
+    "method": "GET",
+    "operationId": "get_v2_headers",
+    "path": "/v2/headers",
+    "product": "sms",
+    "proxy": "senderIds.listSenderIds"
+  },
+  {
+    "method": "GET",
+    "operationId": "get_v2_inbound_messages",
+    "path": "/v2/inbound_messages",
+    "product": "sms",
+    "proxy": "reports.listInboundMessages"
+  },
+  {
+    "method": "GET",
+    "operationId": "get_v2_iys_campaigns",
+    "path": "/v2/iys/campaigns",
+    "product": "sms",
+    "proxy": "iys.listIysCampaigns"
+  },
+  {
+    "method": "GET",
+    "operationId": "get_v2_iys_campaigns_id_consents",
+    "path": "/v2/iys/campaigns/{id}/consents",
+    "product": "sms",
+    "proxy": "iys.listIysCampaignConsents"
+  },
+  {
+    "method": "GET",
+    "operationId": "get_v2_send",
+    "path": "/v2/send",
+    "product": "sms",
+    "proxy": "campaigns.sendLegacy"
+  },
+  {
+    "method": "POST",
+    "operationId": "post_v2_blacklists",
+    "path": "/v2/blacklists",
+    "product": "sms",
+    "proxy": "blacklist.addBlacklistEntry"
+  },
+  {
+    "method": "POST",
+    "operationId": "post_v2_cancel_id",
+    "path": "/v2/cancel/{id}",
+    "product": "sms",
+    "proxy": "campaigns.cancel"
+  },
+  {
+    "method": "POST",
+    "operationId": "post_v2_iys_consents_json",
+    "path": "/v2/iys_consents.json",
+    "product": "sms",
+    "proxy": "iys.submitIysConsents"
+  },
+  {
+    "method": "POST",
+    "operationId": "sendSmsJson",
+    "path": "/v2/send.json",
+    "product": "sms",
+    "proxy": "campaigns.send"
+  },
+  {
+    "method": "GET",
+    "operationId": "answerCall",
+    "path": "/answer/{id}",
+    "product": "switch",
+    "proxy": "calls.answerLegacy"
+  },
+  {
+    "method": "POST",
+    "operationId": "answerCallPost",
+    "path": "/answer",
+    "product": "switch",
+    "proxy": "calls.answer"
+  },
+  {
+    "method": "POST",
+    "operationId": "createAnnouncement",
+    "path": "/announcements",
+    "product": "switch",
+    "proxy": "announcements.createAnnouncement"
+  },
+  {
+    "method": "POST",
+    "operationId": "createBlockedNumber",
+    "path": "/blocked_numbers",
+    "product": "switch",
+    "proxy": "blacklist.createBlockedNumber"
+  },
+  {
+    "method": "GET",
+    "operationId": "createBridge",
+    "path": "/bridge",
+    "product": "switch",
+    "proxy": "calls.bridge"
+  },
+  {
+    "method": "POST",
+    "operationId": "createContact",
+    "path": "/contacts",
+    "product": "switch",
+    "proxy": "contacts.createContact"
+  },
+  {
+    "method": "POST",
+    "operationId": "createContactGroup",
+    "path": "/contact_groups",
+    "product": "switch",
+    "proxy": "contacts.createContactGroup"
+  },
+  {
+    "method": "GET",
+    "operationId": "createDnd",
+    "path": "/dnd/{id}",
+    "product": "switch",
+    "proxy": "users.setDnd"
+  },
+  {
+    "method": "POST",
+    "operationId": "createFaxDocumentUrl",
+    "path": "/fax_document_url",
+    "product": "switch",
+    "proxy": "fax.createFaxDocumentUrl"
+  },
+  {
+    "method": "POST",
+    "operationId": "createFaxOrder",
+    "path": "/fax_orders",
+    "product": "switch",
+    "proxy": "fax.createFaxOrder"
+  },
+  {
+    "method": "POST",
+    "operationId": "createIvrCampaign",
+    "path": "/ivr_campaigns.json",
+    "product": "switch",
+    "proxy": "ivrCampaigns.createIvrCampaign"
+  },
+  {
+    "method": "POST",
+    "operationId": "createRecordingUrl",
+    "path": "/recording_url",
+    "product": "switch",
+    "proxy": "records.createRecordingUrl"
+  },
+  {
+    "method": "POST",
+    "operationId": "createVoicemailRecordingUrl",
+    "path": "/voicemail_recording_url",
+    "product": "switch",
+    "proxy": "records.createVoicemailRecordingUrl"
+  },
+  {
+    "method": "POST",
+    "operationId": "createWebphoneToken",
+    "path": "/webphone_tokens",
+    "product": "switch",
+    "proxy": "users.createWebphoneToken"
+  },
+  {
+    "method": "DELETE",
+    "operationId": "deleteAnnouncement",
+    "path": "/announcements/{id}",
+    "product": "switch",
+    "proxy": "announcements.deleteAnnouncement"
+  },
+  {
+    "method": "DELETE",
+    "operationId": "deleteBlockedNumber",
+    "path": "/blocked_numbers/delete",
+    "product": "switch",
+    "proxy": "blacklist.deleteBlockedNumber"
+  },
+  {
+    "method": "DELETE",
+    "operationId": "deleteContact",
+    "path": "/contacts/{id}",
+    "product": "switch",
+    "proxy": "contacts.deleteContact"
+  },
+  {
+    "method": "DELETE",
+    "operationId": "deleteContactGroup",
+    "path": "/contact_groups/{id}",
+    "product": "switch",
+    "proxy": "contacts.deleteContactGroup"
+  },
+  {
+    "method": "DELETE",
+    "operationId": "deleteIvrCampaign",
+    "path": "/ivr_campaigns/{id}.json",
+    "product": "switch",
+    "proxy": "ivrCampaigns.deleteIvrCampaign"
+  },
+  {
+    "method": "GET",
+    "operationId": "downloadFaxDocument",
+    "path": "/fax_document/{id}",
+    "product": "switch",
+    "proxy": "fax.downloadFaxDocument"
+  },
+  {
+    "method": "GET",
+    "operationId": "getAnnouncements",
+    "path": "/announcements",
+    "product": "switch",
+    "proxy": "announcements.listAnnouncements"
+  },
+  {
+    "method": "GET",
+    "operationId": "getCallerIds",
+    "path": "/caller_ids",
+    "product": "switch",
+    "proxy": "callerIds.listCallerIds"
+  },
+  {
+    "method": "GET",
+    "operationId": "getCdr",
+    "path": "/cdrs/{id}",
+    "product": "switch",
+    "proxy": "records.getCdr"
+  },
+  {
+    "method": "GET",
+    "operationId": "getCdrs",
+    "path": "/cdrs",
+    "product": "switch",
+    "proxy": "records.listCdrs"
+  },
+  {
+    "method": "GET",
+    "operationId": "getCrmIntegrations",
+    "path": "/crm_integrations",
+    "product": "switch",
+    "proxy": "crm.getCrmIntegrations"
+  },
+  {
+    "method": "GET",
+    "operationId": "getExtension",
+    "path": "/extensions/{id}",
+    "product": "switch",
+    "proxy": "users.getExtension"
+  },
+  {
+    "method": "GET",
+    "operationId": "getQueueUserList",
+    "path": "/queue/user_list",
+    "product": "switch",
+    "proxy": "queues.listQueueUsers"
+  },
+  {
+    "method": "GET",
+    "operationId": "getQueues",
+    "path": "/queues",
+    "product": "switch",
+    "proxy": "queues.listQueues"
+  },
+  {
+    "method": "GET",
+    "operationId": "getQueuesPending",
+    "path": "/queues/pending",
+    "product": "switch",
+    "proxy": "queues.listQueuePendingCalls"
+  },
+  {
+    "method": "GET",
+    "operationId": "getVoicemailMessages",
+    "path": "/voicemail_messages",
+    "product": "switch",
+    "proxy": "records.listVoicemailMessages"
+  },
+  {
+    "method": "GET",
+    "operationId": "hangupCall",
+    "path": "/hangup/{id}",
+    "product": "switch",
+    "proxy": "calls.hangup"
+  },
+  {
+    "method": "GET",
+    "operationId": "listAgentStatuses",
+    "path": "/agent_statuses",
+    "product": "switch",
+    "proxy": "users.listAgentStatuses"
+  },
+  {
+    "method": "GET",
+    "operationId": "listBlockedNumbers",
+    "path": "/blocked_numbers",
+    "product": "switch",
+    "proxy": "blacklist.listBlockedNumbers"
+  },
+  {
+    "method": "GET",
+    "operationId": "listContactGroups",
+    "path": "/contact_groups",
+    "product": "switch",
+    "proxy": "contacts.listContactGroups"
+  },
+  {
+    "method": "GET",
+    "operationId": "listContacts",
+    "path": "/contacts",
+    "product": "switch",
+    "proxy": "contacts.listContacts"
+  },
+  {
+    "method": "GET",
+    "operationId": "listExtensions",
+    "path": "/extensions",
+    "product": "switch",
+    "proxy": "users.listExtensions"
+  },
+  {
+    "method": "GET",
+    "operationId": "listFaxOrders",
+    "path": "/fax_orders",
+    "product": "switch",
+    "proxy": "fax.listFaxOrders"
+  },
+  {
+    "method": "GET",
+    "operationId": "listFdrs",
+    "path": "/fdrs",
+    "product": "switch",
+    "proxy": "fax.listFaxRecords"
+  },
+  {
+    "method": "GET",
+    "operationId": "listUserStatuses",
+    "path": "/user_statuses",
+    "product": "switch",
+    "proxy": "users.listUserStatuses"
+  },
+  {
+    "method": "GET",
+    "operationId": "manageQueueUsers",
+    "path": "/queue/manage_users",
+    "product": "switch",
+    "proxy": "queues.manageQueueUsers"
+  },
+  {
+    "method": "GET",
+    "operationId": "muteCall",
+    "path": "/mute/{id}",
+    "product": "switch",
+    "proxy": "calls.setCallMute"
+  },
+  {
+    "method": "GET",
+    "operationId": "originateCall",
+    "path": "/originate",
+    "product": "switch",
+    "proxy": "calls.originateLegacy"
+  },
+  {
+    "method": "POST",
+    "operationId": "originateCallPost",
+    "path": "/originate",
+    "product": "switch",
+    "proxy": "calls.originate"
+  },
+  {
+    "method": "GET",
+    "operationId": "transferCall",
+    "path": "/transfer/{id}",
+    "product": "switch",
+    "proxy": "calls.transferLegacy"
+  },
+  {
+    "method": "POST",
+    "operationId": "transferCallPost",
+    "path": "/transfer",
+    "product": "switch",
+    "proxy": "calls.transfer"
+  },
+  {
+    "method": "PATCH",
+    "operationId": "updateAnnouncement",
+    "path": "/announcements/{id}",
+    "product": "switch",
+    "proxy": "announcements.updateAnnouncement"
+  },
+  {
+    "method": "PATCH",
+    "operationId": "updateContact",
+    "path": "/contacts/{id}",
+    "product": "switch",
+    "proxy": "contacts.updateContact"
+  },
+  {
+    "method": "PATCH",
+    "operationId": "updateContactGroup",
+    "path": "/contact_groups/{id}",
+    "product": "switch",
+    "proxy": "contacts.updateContactGroup"
+  },
+  {
+    "method": "POST",
+    "operationId": "updateCrmIntegrations",
+    "path": "/crm_integrations",
+    "product": "switch",
+    "proxy": "crm.updateCrmIntegrations"
+  },
+  {
+    "method": "PATCH",
+    "operationId": "updateIvrCampaign",
+    "path": "/ivr_campaigns/{id}.json",
+    "product": "switch",
+    "proxy": "ivrCampaigns.updateIvrCampaign"
+  },
+  {
+    "method": "GET",
+    "operationId": "updateOutboundCallerId",
+    "path": "/update_outbound_caller_id",
+    "product": "switch",
+    "proxy": "callerIds.updateOutboundCallerId"
+  },
+  {
+    "method": "GET",
+    "operationId": "webhookPayloadExamples",
+    "path": "/webhook-payload-examples",
+    "product": "switch",
+    "proxy": "crm.getWebhookPayloadExamples"
+  },
+  {
+    "method": "GET",
+    "operationId": "health_health_get",
+    "path": "/health",
+    "product": "whatsapp",
+    "proxy": "health.health"
+  },
+  {
+    "method": "POST",
+    "operationId": "send_otp_v1_messages_otp_post",
+    "path": "/v1/messages/otp",
+    "product": "whatsapp",
+    "proxy": "messages.sendOtp"
+  },
+  {
+    "method": "POST",
+    "operationId": "send_utility_v1_messages_utility_post",
+    "path": "/v1/messages/utility",
+    "product": "whatsapp",
+    "proxy": "messages.sendUtility"
+  }
+]
