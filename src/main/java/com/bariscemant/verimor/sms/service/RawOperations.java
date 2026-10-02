@@ -93,6 +93,13 @@ public final class RawOperations {
             Map.of("password", "body", "username", "body"),
             "body");
 
+    public static final RawOperation SEND_OTP = new RawOperation(
+            "sendOtp",
+            "POST",
+            "/v2/otp",
+            Map.of("password", "body", "username", "body"),
+            null);
+
     public static final RawOperation SEND_SMS_JSON = new RawOperation(
             "sendSmsJson",
             "POST",
@@ -113,6 +120,7 @@ public final class RawOperations {
             POST_V2_BLACKLISTS,
             POST_V2_CANCEL_ID,
             POST_V2_IYS_CONSENTS_JSON,
+            SEND_OTP,
             SEND_SMS_JSON);
 
     private RawOperations() {

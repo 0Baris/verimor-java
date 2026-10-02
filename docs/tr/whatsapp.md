@@ -9,3 +9,5 @@ System.out.println(otp.getId() + " " + otp.getStatus());
 ```
 
 Mesaj uçları `202 Accepted` döner. Gövde beklenen `MessageResponse` şeklinde değilse veya zorunlu alanlar eksikse `UnexpectedResponseException` atılır. `health().health()` kimlik bilgisi göndermez.
+
+`messages()` ayrıca tek şablonu en fazla 10.000 alıcıya kuyruğa alan `sendBulk(BulkMessageRequest)`, gönderilen mesajları filtreleyen `listMessages(...)` ve tek mesajın güncel durumunu döndüren `getMessage(messageRef)` metotlarını sunar.

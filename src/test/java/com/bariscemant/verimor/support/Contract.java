@@ -8,7 +8,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-/** The exported 68-operation contract, read from the repository root. */
+/** The exported 72-operation contract, read from the repository root. */
 public final class Contract {
     public static final class Operation {
         public final String product;

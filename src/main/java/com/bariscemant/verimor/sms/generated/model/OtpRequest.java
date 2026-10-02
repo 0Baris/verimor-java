@@ -21,109 +21,354 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.time.OffsetDateTime;
 import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 /**
- * GetV2Blacklists200ResponseRecordsInner
+ * /v2/otp istek gövdesi. code ve msg alanlarından en az biri zorunludur.
  */
 @JsonPropertyOrder({
-  GetV2Blacklists200ResponseRecordsInner.JSON_PROPERTY_PHONE,
-  GetV2Blacklists200ResponseRecordsInner.JSON_PROPERTY_SOURCE,
-  GetV2Blacklists200ResponseRecordsInner.JSON_PROPERTY_CREATED_AT
+  OtpRequest.JSON_PROPERTY_USERNAME,
+  OtpRequest.JSON_PROPERTY_PASSWORD,
+  OtpRequest.JSON_PROPERTY_HEADER,
+  OtpRequest.JSON_PROPERTY_DEST,
+  OtpRequest.JSON_PROPERTY_CODE,
+  OtpRequest.JSON_PROPERTY_MSG,
+  OtpRequest.JSON_PROPERTY_LANG,
+  OtpRequest.JSON_PROPERTY_CUSTOM_ID,
+  OtpRequest.JSON_PROPERTY_DATACODING
 })
-public class GetV2Blacklists200ResponseRecordsInner {
-  public static final String JSON_PROPERTY_PHONE = "phone";
-  @javax.annotation.Nullable
-  private String phone;
+public class OtpRequest {
+  public static final String JSON_PROPERTY_USERNAME = "username";
+  @javax.annotation.Nonnull
+  private String username;
 
-  public static final String JSON_PROPERTY_SOURCE = "source";
-  @javax.annotation.Nullable
-  private String source;
+  public static final String JSON_PROPERTY_PASSWORD = "password";
+  @javax.annotation.Nonnull
+  private String password;
 
-  public static final String JSON_PROPERTY_CREATED_AT = "created_at";
+  public static final String JSON_PROPERTY_HEADER = "header";
   @javax.annotation.Nullable
-  private OffsetDateTime createdAt;
+  private String header;
 
-  public GetV2Blacklists200ResponseRecordsInner() { 
+  public static final String JSON_PROPERTY_DEST = "dest";
+  @javax.annotation.Nonnull
+  private String dest;
+
+  public static final String JSON_PROPERTY_CODE = "code";
+  @javax.annotation.Nullable
+  private String code;
+
+  public static final String JSON_PROPERTY_MSG = "msg";
+  @javax.annotation.Nullable
+  private String msg;
+
+  /**
+   * Şablon dili. Desteklenmeyen değerlerde tr kullanılır. Yalnızca code ile üretilen şablonu etkiler; msg gönderildiğinde etkisi yoktur.
+   */
+  public enum LangEnum {
+    TR(String.valueOf("tr")),
+    
+    EN(String.valueOf("en"));
+
+    private String value;
+
+    LangEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static LangEnum fromValue(String value) {
+      for (LangEnum b : LangEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
   }
 
-  public GetV2Blacklists200ResponseRecordsInner phone(@javax.annotation.Nullable String phone) {
-    this.phone = phone;
+  public static final String JSON_PROPERTY_LANG = "lang";
+  @javax.annotation.Nullable
+  private LangEnum lang = LangEnum.TR;
+
+  public static final String JSON_PROPERTY_CUSTOM_ID = "custom_id";
+  @javax.annotation.Nullable
+  private String customId;
+
+  /**
+   * Mesaj metni için kullanılacak karakter kodlaması (0: Normal, 1: Türkçe, 2: Unicode). Gönderilmezse mesaj metnine göre otomatik belirlenir.
+   */
+  public enum DatacodingEnum {
+    NUMBER_0(Integer.valueOf(0)),
+    
+    NUMBER_1(Integer.valueOf(1)),
+    
+    NUMBER_2(Integer.valueOf(2));
+
+    private Integer value;
+
+    DatacodingEnum(Integer value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public Integer getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static DatacodingEnum fromValue(Integer value) {
+      for (DatacodingEnum b : DatacodingEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+  }
+
+  public static final String JSON_PROPERTY_DATACODING = "datacoding";
+  @javax.annotation.Nullable
+  private DatacodingEnum datacoding;
+
+  public OtpRequest() { 
+  }
+
+  public OtpRequest username(@javax.annotation.Nonnull String username) {
+    this.username = username;
     return this;
   }
 
   /**
-   * Kara listeye alınmış numara
-   * @return phone
+   * API kullanıcı adı
+   * @return username
    */
-  @javax.annotation.Nullable
-  @JsonProperty(value = JSON_PROPERTY_PHONE, required = false)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public String getPhone() {
-    return phone;
+  @javax.annotation.Nonnull
+  @JsonProperty(value = JSON_PROPERTY_USERNAME, required = true)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  public String getUsername() {
+    return username;
   }
 
 
-  @JsonProperty(value = JSON_PROPERTY_PHONE, required = false)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPhone(@javax.annotation.Nullable String phone) {
-    this.phone = phone;
+  @JsonProperty(value = JSON_PROPERTY_USERNAME, required = true)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  public void setUsername(@javax.annotation.Nonnull String username) {
+    this.username = username;
   }
 
 
-  public GetV2Blacklists200ResponseRecordsInner source(@javax.annotation.Nullable String source) {
-    this.source = source;
+  public OtpRequest password(@javax.annotation.Nonnull String password) {
+    this.password = password;
     return this;
   }
 
   /**
-   * Kaynak
-   * @return source
+   * API şifresi
+   * @return password
    */
-  @javax.annotation.Nullable
-  @JsonProperty(value = JSON_PROPERTY_SOURCE, required = false)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public String getSource() {
-    return source;
+  @javax.annotation.Nonnull
+  @JsonProperty(value = JSON_PROPERTY_PASSWORD, required = true)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  public String getPassword() {
+    return password;
   }
 
 
-  @JsonProperty(value = JSON_PROPERTY_SOURCE, required = false)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSource(@javax.annotation.Nullable String source) {
-    this.source = source;
+  @JsonProperty(value = JSON_PROPERTY_PASSWORD, required = true)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  public void setPassword(@javax.annotation.Nonnull String password) {
+    this.password = password;
   }
 
 
-  public GetV2Blacklists200ResponseRecordsInner createdAt(@javax.annotation.Nullable OffsetDateTime createdAt) {
-    this.createdAt = createdAt;
+  public OtpRequest header(@javax.annotation.Nullable String header) {
+    this.header = header;
     return this;
   }
 
   /**
-   * Kara listeye eklenme tarih saati
-   * @return createdAt
+   * Gönderici başlığı. /v2/send.json&#39;daki source_addr ile aynı doğrulamadan geçer. Gönderilmezse hesabın varsayılan başlığı kullanılır.
+   * @return header
    */
   @javax.annotation.Nullable
-  @JsonProperty(value = JSON_PROPERTY_CREATED_AT, required = false)
+  @JsonProperty(value = JSON_PROPERTY_HEADER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public OffsetDateTime getCreatedAt() {
-    return createdAt;
+  public String getHeader() {
+    return header;
   }
 
 
-  @JsonProperty(value = JSON_PROPERTY_CREATED_AT, required = false)
+  @JsonProperty(value = JSON_PROPERTY_HEADER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreatedAt(@javax.annotation.Nullable OffsetDateTime createdAt) {
-    this.createdAt = createdAt;
+  public void setHeader(@javax.annotation.Nullable String header) {
+    this.header = header;
+  }
+
+
+  public OtpRequest dest(@javax.annotation.Nonnull String dest) {
+    this.dest = dest;
+    return this;
+  }
+
+  /**
+   * Mesajın gönderileceği tek alıcı numarası. Virgülle ayrılmış birden fazla numara gönderilirse MULTIPLE_DESTINATION_NOT_ALLOWED döner.
+   * @return dest
+   */
+  @javax.annotation.Nonnull
+  @JsonProperty(value = JSON_PROPERTY_DEST, required = true)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  public String getDest() {
+    return dest;
+  }
+
+
+  @JsonProperty(value = JSON_PROPERTY_DEST, required = true)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  public void setDest(@javax.annotation.Nonnull String dest) {
+    this.dest = dest;
+  }
+
+
+  public OtpRequest code(@javax.annotation.Nullable String code) {
+    this.code = code;
+    return this;
+  }
+
+  /**
+   * Doğrulama kodu. msg gönderilmezse lang ile seçilen şablondan mesaj üretilir; msg içinde {code} geçiyorsa onun yerine yazılır. (code veya msg&#39;den en az biri zorunlu)
+   * @return code
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(value = JSON_PROPERTY_CODE, required = false)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public String getCode() {
+    return code;
+  }
+
+
+  @JsonProperty(value = JSON_PROPERTY_CODE, required = false)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCode(@javax.annotation.Nullable String code) {
+    this.code = code;
+  }
+
+
+  public OtpRequest msg(@javax.annotation.Nullable String msg) {
+    this.msg = msg;
+    return this;
+  }
+
+  /**
+   * Serbest mesaj metni. Gönderilirse şablon yerine kullanılır; içindeki {code} yer tutucusu code ile doldurulur. {code} varsa code zorunludur (aksi halde MISSING_CODE). (code veya msg&#39;den en az biri zorunlu)
+   * @return msg
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(value = JSON_PROPERTY_MSG, required = false)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public String getMsg() {
+    return msg;
+  }
+
+
+  @JsonProperty(value = JSON_PROPERTY_MSG, required = false)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMsg(@javax.annotation.Nullable String msg) {
+    this.msg = msg;
+  }
+
+
+  public OtpRequest lang(@javax.annotation.Nullable LangEnum lang) {
+    this.lang = lang;
+    return this;
+  }
+
+  /**
+   * Şablon dili. Desteklenmeyen değerlerde tr kullanılır. Yalnızca code ile üretilen şablonu etkiler; msg gönderildiğinde etkisi yoktur.
+   * @return lang
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public LangEnum getLang() {
+    return lang;
+  }
+
+
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setLang(@javax.annotation.Nullable LangEnum lang) {
+    this.lang = lang;
+  }
+
+
+  public OtpRequest customId(@javax.annotation.Nullable String customId) {
+    this.customId = customId;
+    return this;
+  }
+
+  /**
+   * Özel kampanya ID&#39;si. Raporlarda campaign_custom_id olarak döner.
+   * @return customId
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_ID, required = false)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public String getCustomId() {
+    return customId;
+  }
+
+
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_ID, required = false)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCustomId(@javax.annotation.Nullable String customId) {
+    this.customId = customId;
+  }
+
+
+  public OtpRequest datacoding(@javax.annotation.Nullable DatacodingEnum datacoding) {
+    this.datacoding = datacoding;
+    return this;
+  }
+
+  /**
+   * Mesaj metni için kullanılacak karakter kodlaması (0: Normal, 1: Türkçe, 2: Unicode). Gönderilmezse mesaj metnine göre otomatik belirlenir.
+   * @return datacoding
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(value = JSON_PROPERTY_DATACODING, required = false)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public DatacodingEnum getDatacoding() {
+    return datacoding;
+  }
+
+
+  @JsonProperty(value = JSON_PROPERTY_DATACODING, required = false)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setDatacoding(@javax.annotation.Nullable DatacodingEnum datacoding) {
+    this.datacoding = datacoding;
   }
 
 
   /**
-   * Return true if this get_v2_blacklists_200_response_records_inner object is equal to o.
+   * Return true if this OtpRequest object is equal to o.
    */
   @Override
   public boolean equals(Object o) {
@@ -133,24 +378,36 @@ public class GetV2Blacklists200ResponseRecordsInner {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    GetV2Blacklists200ResponseRecordsInner getV2Blacklists200ResponseRecordsInner = (GetV2Blacklists200ResponseRecordsInner) o;
-    return Objects.equals(this.phone, getV2Blacklists200ResponseRecordsInner.phone) &&
-        Objects.equals(this.source, getV2Blacklists200ResponseRecordsInner.source) &&
-        Objects.equals(this.createdAt, getV2Blacklists200ResponseRecordsInner.createdAt);
+    OtpRequest otpRequest = (OtpRequest) o;
+    return Objects.equals(this.username, otpRequest.username) &&
+        Objects.equals(this.password, otpRequest.password) &&
+        Objects.equals(this.header, otpRequest.header) &&
+        Objects.equals(this.dest, otpRequest.dest) &&
+        Objects.equals(this.code, otpRequest.code) &&
+        Objects.equals(this.msg, otpRequest.msg) &&
+        Objects.equals(this.lang, otpRequest.lang) &&
+        Objects.equals(this.customId, otpRequest.customId) &&
+        Objects.equals(this.datacoding, otpRequest.datacoding);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(phone, source, createdAt);
+    return Objects.hash(username, password, header, dest, code, msg, lang, customId, datacoding);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class GetV2Blacklists200ResponseRecordsInner {\n");
-    sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
-    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("class OtpRequest {\n");
+    sb.append("    username: ").append(toIndentedString(username)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    header: ").append(toIndentedString(header)).append("\n");
+    sb.append("    dest: ").append(toIndentedString(dest)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
+    sb.append("    msg: ").append(toIndentedString(msg)).append("\n");
+    sb.append("    lang: ").append(toIndentedString(lang)).append("\n");
+    sb.append("    customId: ").append(toIndentedString(customId)).append("\n");
+    sb.append("    datacoding: ").append(toIndentedString(datacoding)).append("\n");
     sb.append("}");
     return sb.toString();
   }

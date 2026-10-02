@@ -21,6 +21,45 @@ public final class MessagesService {
         this.core = core;
     }
 
+    /** GET /v1/messages/{message_ref} */
+    public MessageDetailResponse getMessage(String messageRef) throws IOException, InterruptedException {
+        Objects.requireNonNull(messageRef, "messageRef");
+        CallParts call = new CallParts();
+        call.path("message_ref", messageRef);
+        TransportResponse reply = core.send(RawOperations.GET_MESSAGE_V1_MESSAGES_MESSAGE_REF_GET, call);
+        return ResponseReader.json(reply, MessageDetailResponse.class);
+    }
+
+    /** GET /v1/messages */
+    public MessageListResponse listMessages(@Nullable String to, @Nullable String waMessageId, @Nullable String status, @Nullable String category, @Nullable String templateName, @Nullable String since, @Nullable String until, @Nullable Long limit, @Nullable Long offset) throws IOException, InterruptedException {
+        CallParts call = new CallParts();
+        call.query("to", to);
+        call.query("wa_message_id", waMessageId);
+        call.query("status", status);
+        call.query("category", category);
+        call.query("template_name", templateName);
+        call.query("since", since);
+        call.query("until", until);
+        call.query("limit", limit);
+        call.query("offset", offset);
+        TransportResponse reply = core.send(RawOperations.LIST_MESSAGES_V1_MESSAGES_GET, call);
+        return ResponseReader.json(reply, MessageListResponse.class);
+    }
+
+    /** GET /v1/messages without the optional parameters. */
+    public MessageListResponse listMessages() throws IOException, InterruptedException {
+        return listMessages(null, null, null, null, null, null, null, null, null);
+    }
+
+    /** POST /v1/messages/bulk */
+    public MessageResponse sendBulk(BulkMessageRequest request) throws IOException, InterruptedException {
+        Objects.requireNonNull(request, "request");
+        CallParts call = new CallParts();
+        call.jsonBody(VerimorJson.serialize(request));
+        TransportResponse reply = core.send(RawOperations.SEND_BULK_V1_MESSAGES_BULK_POST, call);
+        return ResponseReader.json(reply, MessageResponse.class);
+    }
+
     /** POST /v1/messages/otp */
     public MessageResponse sendOtp(TemplateMessageRequest request) throws IOException, InterruptedException {
         Objects.requireNonNull(request, "request");
