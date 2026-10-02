@@ -14,7 +14,7 @@ public abstract class ClientOptions<T extends ClientOptions<T>> {
 
     protected abstract T self();
 
-    /** Overrides the product's default address (for example a local test server). */
+    /** Server address; defaults to Verimor's address for the product. An IP, a port and a path prefix are kept. */
     public T baseUri(URI baseUri) {
         this.baseUri = Objects.requireNonNull(baseUri, "baseUri");
         return self();

@@ -4,7 +4,7 @@ Her ürünün kendi seçenek sınıfı vardır; kimlik bilgileri kurucuda zorunl
 
 | Yöntem | Açıklama |
 | --- | --- |
-| `baseUri(URI)` | Ürünün varsayılan adresini değiştirir (ör. yerel test sunucusu). |
+| `baseUri(URI)` | Sunucu adresi. Varsayılan olarak ürünün Verimor adresidir; proxy gibi başka bir sunucu kullanmak için değiştirin. IP, port ve alt yol korunur. |
 | `timeout(Duration)` | İstek başına süre sınırı; varsayılan 30 saniye. Sıfır veya negatif değer reddedilir. |
 | `httpClient(HttpClient)` | Sizin yönettiğiniz istemci (proxy, TLS, executor). SDK onu kapatmaz ve ayarlarını değiştirmez. |
 

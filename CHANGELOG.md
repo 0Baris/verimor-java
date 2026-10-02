@@ -2,6 +2,11 @@
 
 Bu proje [Semantic Versioning](https://semver.org/) kullanır. / This project follows Semantic Versioning.
 
+## 0.2.1
+
+- Sunucu adresi açıklamaları netleşti: varsayılan Verimor'un adresidir; kendi sunucunuz veya proxy için değiştirilebilir, IP, port ve alt yol korunur (testle doğrulandı).
+- Server URL docs clarified: Verimor's address is the default and can be changed to your own server or proxy; an IP, a port and a path prefix are kept (now tested).
+
 ## 0.2.0
 
 - Verimor'un yeni operasyonları: SMS `campaigns().sendOtp(...)` (`POST /v2/otp`); WhatsApp `messages().sendBulk(...)`, `listMessages(...)` ve `getMessage(...)`. Kapsam 72 operasyon: SMS 14, Switch 52, WhatsApp 6.
