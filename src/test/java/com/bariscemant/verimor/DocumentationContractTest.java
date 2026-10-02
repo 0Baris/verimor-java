@@ -54,13 +54,16 @@ class DocumentationContractTest {
     }
 
     @Test
-    void everyGuideExistsInBothLanguagesAndSixExamplesShip() throws Exception {
+    void everyGuideExistsInBothLanguagesAndExamplesShip() throws Exception {
         try (Stream<Path> tr = Files.list(Path.of("docs/tr")); Stream<Path> en = Files.list(Path.of("docs/en"));
                 Stream<Path> examples = Files.list(Path.of("examples/src/main/java/examples"))) {
             assertEquals(
                     tr.map(p -> p.getFileName().toString()).sorted().collect(Collectors.toList()),
                     en.map(p -> p.getFileName().toString()).sorted().collect(Collectors.toList()));
-            assertEquals(6, examples.count());
+            assertEquals(6, examples.filter(Files::isRegularFile).count());
+        }
+        try (Stream<Path> operations = Files.walk(Path.of("examples/src/main/java/examples/operations"))) {
+            assertEquals(72, operations.filter(p -> p.toString().endsWith("Example.java")).count());
         }
     }
 }

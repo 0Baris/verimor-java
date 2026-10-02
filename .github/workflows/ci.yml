@@ -38,3 +38,4 @@ jobs:
           java-version: "21"
           cache: maven
       - run: sh scripts/test-consumer.sh
+      - run: python3 scripts/run_examples.py java
