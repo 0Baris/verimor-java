@@ -1,6 +1,6 @@
 # Java SDK operasyonları
 
-Bu tablo normalize edilmiş 68 Verimor operasyonunun public Java servis karşılığını listeler.
+Bu tablo normalize edilmiş 72 Verimor operasyonunun public Java servis karşılığını listeler.
 
 | Ürün | HTTP | Yol | Operation ID | Java servis |
 | --- | --- | --- | --- | --- |
@@ -16,6 +16,7 @@ Bu tablo normalize edilmiş 68 Verimor operasyonunun public Java servis karşıl
 | sms | `POST` | `/v2/blacklists` | `post_v2_blacklists` | `blacklist.addBlacklistEntry` |
 | sms | `POST` | `/v2/cancel/{id}` | `post_v2_cancel_id` | `campaigns.cancel` |
 | sms | `POST` | `/v2/iys_consents.json` | `post_v2_iys_consents_json` | `iys.submitIysConsents` |
+| sms | `POST` | `/v2/otp` | `sendOtp` | `campaigns.sendOtp` |
 | sms | `POST` | `/v2/send.json` | `sendSmsJson` | `campaigns.send` |
 | switch | `GET` | `/answer/{id}` | `answerCall` | `calls.answerLegacy` |
 | switch | `POST` | `/answer` | `answerCallPost` | `calls.answer` |
@@ -69,6 +70,9 @@ Bu tablo normalize edilmiş 68 Verimor operasyonunun public Java servis karşıl
 | switch | `PATCH` | `/ivr_campaigns/{id}.json` | `updateIvrCampaign` | `ivrCampaigns.updateIvrCampaign` |
 | switch | `GET` | `/update_outbound_caller_id` | `updateOutboundCallerId` | `callerIds.updateOutboundCallerId` |
 | switch | `GET` | `/webhook-payload-examples` | `webhookPayloadExamples` | `crm.getWebhookPayloadExamples` |
+| whatsapp | `GET` | `/v1/messages/{message_ref}` | `get_message_v1_messages__message_ref__get` | `messages.getMessage` |
 | whatsapp | `GET` | `/health` | `health_health_get` | `health.health` |
+| whatsapp | `GET` | `/v1/messages` | `list_messages_v1_messages_get` | `messages.listMessages` |
+| whatsapp | `POST` | `/v1/messages/bulk` | `send_bulk_v1_messages_bulk_post` | `messages.sendBulk` |
 | whatsapp | `POST` | `/v1/messages/otp` | `send_otp_v1_messages_otp_post` | `messages.sendOtp` |
 | whatsapp | `POST` | `/v1/messages/utility` | `send_utility_v1_messages_utility_post` | `messages.sendUtility` |

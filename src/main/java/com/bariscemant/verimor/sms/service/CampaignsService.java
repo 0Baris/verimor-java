@@ -62,4 +62,13 @@ public final class CampaignsService {
     public String sendLegacy(String dest, String msg) throws IOException, InterruptedException {
         return sendLegacy(dest, msg, null, null, null, null, null, null);
     }
+
+    /** POST /v2/otp */
+    public String sendOtp(OtpRequest request) throws IOException, InterruptedException {
+        Objects.requireNonNull(request, "request");
+        CallParts call = new CallParts();
+        call.jsonBody(VerimorJson.serialize(request));
+        TransportResponse reply = core.send(RawOperations.SEND_OTP, call);
+        return ResponseReader.text(reply);
+    }
 }

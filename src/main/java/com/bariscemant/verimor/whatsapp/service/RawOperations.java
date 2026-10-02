@@ -9,11 +9,32 @@ import java.util.Map;
 public final class RawOperations {
     public static final URI DEFAULT_BASE_URI = URI.create("https://wapi.verimor.com.tr/");
 
+    public static final RawOperation GET_MESSAGE_V1_MESSAGES_MESSAGE_REF_GET = new RawOperation(
+            "get_message_v1_messages__message_ref__get",
+            "GET",
+            "/v1/messages/{message_ref}",
+            Map.of("x-api-key", "header"),
+            null);
+
     public static final RawOperation HEALTH_HEALTH_GET = new RawOperation(
             "health_health_get",
             "GET",
             "/health",
             Map.of(),
+            null);
+
+    public static final RawOperation LIST_MESSAGES_V1_MESSAGES_GET = new RawOperation(
+            "list_messages_v1_messages_get",
+            "GET",
+            "/v1/messages",
+            Map.of("x-api-key", "header"),
+            null);
+
+    public static final RawOperation SEND_BULK_V1_MESSAGES_BULK_POST = new RawOperation(
+            "send_bulk_v1_messages_bulk_post",
+            "POST",
+            "/v1/messages/bulk",
+            Map.of("x-api-key", "header"),
             null);
 
     public static final RawOperation SEND_OTP_V1_MESSAGES_OTP_POST = new RawOperation(
@@ -31,7 +52,10 @@ public final class RawOperations {
             null);
 
     public static final List<RawOperation> ALL = List.of(
+            GET_MESSAGE_V1_MESSAGES_MESSAGE_REF_GET,
             HEALTH_HEALTH_GET,
+            LIST_MESSAGES_V1_MESSAGES_GET,
+            SEND_BULK_V1_MESSAGES_BULK_POST,
             SEND_OTP_V1_MESSAGES_OTP_POST,
             SEND_UTILITY_V1_MESSAGES_UTILITY_POST);
 

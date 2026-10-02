@@ -2,7 +2,7 @@
 
 [English](README.en.md)
 
-Verimor SMS, Switch ve WhatsApp API'leri için Java 11+ ve Kotlin uygulamalarında kullanılabilen bağımsız topluluk SDK'sı. 68 operasyonun tamamı alan servisleri ve `raw()` erişimiyle kullanılabilir.
+Verimor SMS, Switch ve WhatsApp API'leri için Java 11+ ve Kotlin uygulamalarında kullanılabilen bağımsız topluluk SDK'sı. 72 operasyonun tamamı alan servisleri ve `raw()` erişimiyle kullanılabilir.
 
 > Bu proje topluluk tarafından sürdürülür ve resmî değildir. Verimor adına destek veya uyumluluk garantisi vermez.
 >
@@ -16,7 +16,7 @@ Maven:
 <dependency>
   <groupId>io.github.0baris</groupId>
   <artifactId>verimor</artifactId>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
 </dependency>
 ```
 

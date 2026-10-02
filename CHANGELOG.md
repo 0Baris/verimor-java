@@ -2,6 +2,13 @@
 
 Bu proje [Semantic Versioning](https://semver.org/) kullanır. / This project follows Semantic Versioning.
 
+## 0.2.0
+
+- Verimor'un yeni operasyonları: SMS `campaigns().sendOtp(...)` (`POST /v2/otp`); WhatsApp `messages().sendBulk(...)`, `listMessages(...)` ve `getMessage(...)`. Kapsam 72 operasyon: SMS 14, Switch 52, WhatsApp 6.
+- Jackson 2.22 ile `-Werror` derlemesini kıran kullanımdan kaldırılmış ayar değiştirildi; Jackson 2.15–2.22 desteklenir.
+- Verimor's new operations: SMS `campaigns().sendOtp(...)` (`POST /v2/otp`); WhatsApp `messages().sendBulk(...)`, `listMessages(...)` and `getMessage(...)`. Coverage is 72 operations: 14 SMS, 52 Switch, 6 WhatsApp.
+- Replaced a deprecated Jackson setter that broke `-Werror` builds with Jackson 2.22; Jackson 2.15–2.22 is supported.
+
 ## 0.1.0 - Yayın adayı / Release candidate
 
 - Java 11+ ve Kotlin için SMS, Switch ve WhatsApp istemcileri.

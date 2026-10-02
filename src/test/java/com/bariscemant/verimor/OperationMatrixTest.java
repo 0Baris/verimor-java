@@ -28,12 +28,12 @@ class OperationMatrixTest {
     }
 
     @Test
-    void theContractListsAll68Operations() throws Exception {
+    void theContractListsAll72Operations() throws Exception {
         List<Contract.Operation> operations = Contract.load();
-        assertEquals(68, operations.size());
+        assertEquals(72, operations.size());
         Map<String, Long> byProduct = operations.stream()
                 .collect(Collectors.groupingBy(o -> o.product, Collectors.counting()));
-        assertEquals(Map.of("sms", 13L, "switch", 52L, "whatsapp", 3L), byProduct);
+        assertEquals(Map.of("sms", 14L, "switch", 52L, "whatsapp", 6L), byProduct);
     }
 
     @ParameterizedTest
@@ -83,9 +83,9 @@ class OperationMatrixTest {
     @Test
     void credentialWiringMatchesTheContractCounts() {
         assertEquals(10, count("sms", "query"));
-        assertEquals(3, count("sms", "body"));
+        assertEquals(4, count("sms", "body"));
         assertEquals(50, count("switch", "query"));
-        assertEquals(2, count("whatsapp", "header"));
+        assertEquals(5, count("whatsapp", "header"));
     }
 
     private static long count(String product, String location) {
