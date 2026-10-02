@@ -16,7 +16,7 @@ Maven:
 <dependency>
   <groupId>io.github.0baris</groupId>
   <artifactId>verimor</artifactId>
-  <version>0.2.1</version>
+  <version>0.3.0</version>
 </dependency>
 ```
 
@@ -70,6 +70,12 @@ Paketler JSR-305 açıklamaları taşır; `-Xjsr305=strict` ile Kotlin gerçek n
 - Varsayılan zaman aşımı 30 saniyedir; SDK hiçbir isteği otomatik tekrarlamaz.
 - Kendi `HttpClient`'ınızı `httpClient(...)` ile verebilirsiniz; SDK onu kapatmaz ve ayarlarını değiştirmez.
 - 2xx dışındaki yanıtlar `VerimorApiException`, beklenmeyen 2xx gövdeleri `UnexpectedResponseException` olur. Ağ hataları ve zaman aşımı `IOException` (ör. `HttpTimeoutException`) olarak kalır.
+
+## Örnekler
+
+72 operasyonun her biri için çalıştırılabilir bir örnek [`examples/src/main/java/examples/operations/`](examples/src/main/java/examples/operations/) altındadır; her sınıfın kendi `main` metodu vardır. Her dosya kimlik bilgilerini ortam değişkenlerinden, sunucu adresini `VERIMOR_BASE_URL` değişkeninden okur; değişken yoksa Verimor'un sunucusuna gider. `scripts/run_examples.py` hepsini Verimor'a hiç bağlanmadan yerel bir kayıt sunucusuna karşı çalıştırır.
+
+Yapay zekâ asistanları için tek dosyalık başvuru: [`llms.md`](llms.md).
 
 ## Belgeler
 

@@ -1,0 +1,722 @@
+[
+  {
+    "product": "sms",
+    "operationId": "post_v2_blacklists",
+    "method": "POST",
+    "path": "/v2/blacklists",
+    "key": "examples.operations.sms.AddBlacklistEntryExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/AddBlacklistEntryExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "answerCallPost",
+    "method": "POST",
+    "path": "/answer",
+    "key": "examples.operations.switchapi.AnswerExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/AnswerExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "answerCall",
+    "method": "GET",
+    "path": "/answer/{id}",
+    "key": "examples.operations.switchapi.AnswerLegacyExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/AnswerLegacyExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "get_v2_balance",
+    "method": "GET",
+    "path": "/v2/balance",
+    "key": "examples.operations.sms.BalanceExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/BalanceExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createBridge",
+    "method": "GET",
+    "path": "/bridge",
+    "key": "examples.operations.switchapi.BridgeExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/BridgeExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "post_v2_cancel_id",
+    "method": "POST",
+    "path": "/v2/cancel/{id}",
+    "key": "examples.operations.sms.CancelExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/CancelExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createAnnouncement",
+    "method": "POST",
+    "path": "/announcements",
+    "key": "examples.operations.switchapi.CreateAnnouncementExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/CreateAnnouncementExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createBlockedNumber",
+    "method": "POST",
+    "path": "/blocked_numbers",
+    "key": "examples.operations.switchapi.CreateBlockedNumberExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/CreateBlockedNumberExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createContact",
+    "method": "POST",
+    "path": "/contacts",
+    "key": "examples.operations.switchapi.CreateContactExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/CreateContactExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createContactGroup",
+    "method": "POST",
+    "path": "/contact_groups",
+    "key": "examples.operations.switchapi.CreateContactGroupExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/CreateContactGroupExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createFaxDocumentUrl",
+    "method": "POST",
+    "path": "/fax_document_url",
+    "key": "examples.operations.switchapi.CreateFaxDocumentUrlExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/CreateFaxDocumentUrlExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createFaxOrder",
+    "method": "POST",
+    "path": "/fax_orders",
+    "key": "examples.operations.switchapi.CreateFaxOrderExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/CreateFaxOrderExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createIvrCampaign",
+    "method": "POST",
+    "path": "/ivr_campaigns.json",
+    "key": "examples.operations.switchapi.CreateIvrCampaignExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/CreateIvrCampaignExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createRecordingUrl",
+    "method": "POST",
+    "path": "/recording_url",
+    "key": "examples.operations.switchapi.CreateRecordingUrlExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/CreateRecordingUrlExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createVoicemailRecordingUrl",
+    "method": "POST",
+    "path": "/voicemail_recording_url",
+    "key": "examples.operations.switchapi.CreateVoicemailRecordingUrlExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/CreateVoicemailRecordingUrlExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createWebphoneToken",
+    "method": "POST",
+    "path": "/webphone_tokens",
+    "key": "examples.operations.switchapi.CreateWebphoneTokenExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/CreateWebphoneTokenExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "deleteAnnouncement",
+    "method": "DELETE",
+    "path": "/announcements/{id}",
+    "key": "examples.operations.switchapi.DeleteAnnouncementExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/DeleteAnnouncementExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "delete_v2_blacklists_id",
+    "method": "DELETE",
+    "path": "/v2/blacklists/{id}",
+    "key": "examples.operations.sms.DeleteBlacklistEntryExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/DeleteBlacklistEntryExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "deleteBlockedNumber",
+    "method": "DELETE",
+    "path": "/blocked_numbers/delete",
+    "key": "examples.operations.switchapi.DeleteBlockedNumberExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/DeleteBlockedNumberExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "deleteContact",
+    "method": "DELETE",
+    "path": "/contacts/{id}",
+    "key": "examples.operations.switchapi.DeleteContactExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/DeleteContactExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "deleteContactGroup",
+    "method": "DELETE",
+    "path": "/contact_groups/{id}",
+    "key": "examples.operations.switchapi.DeleteContactGroupExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/DeleteContactGroupExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "deleteIvrCampaign",
+    "method": "DELETE",
+    "path": "/ivr_campaigns/{id}.json",
+    "key": "examples.operations.switchapi.DeleteIvrCampaignExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/DeleteIvrCampaignExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "downloadFaxDocument",
+    "method": "GET",
+    "path": "/fax_document/{id}",
+    "key": "examples.operations.switchapi.DownloadFaxDocumentExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/DownloadFaxDocumentExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "getCdr",
+    "method": "GET",
+    "path": "/cdrs/{id}",
+    "key": "examples.operations.switchapi.GetCdrExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/GetCdrExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "getCrmIntegrations",
+    "method": "GET",
+    "path": "/crm_integrations",
+    "key": "examples.operations.switchapi.GetCrmIntegrationsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/GetCrmIntegrationsExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "getExtension",
+    "method": "GET",
+    "path": "/extensions/{id}",
+    "key": "examples.operations.switchapi.GetExtensionExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/GetExtensionExample.java"
+    }
+  },
+  {
+    "product": "whatsapp",
+    "operationId": "get_message_v1_messages__message_ref__get",
+    "method": "GET",
+    "path": "/v1/messages/{message_ref}",
+    "key": "examples.operations.whatsapp.GetMessageExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/whatsapp/GetMessageExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "webhookPayloadExamples",
+    "method": "GET",
+    "path": "/webhook-payload-examples",
+    "key": "examples.operations.switchapi.GetWebhookPayloadExamplesExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/GetWebhookPayloadExamplesExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "hangupCall",
+    "method": "GET",
+    "path": "/hangup/{id}",
+    "key": "examples.operations.switchapi.HangupExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/HangupExample.java"
+    }
+  },
+  {
+    "product": "whatsapp",
+    "operationId": "health_health_get",
+    "method": "GET",
+    "path": "/health",
+    "key": "examples.operations.whatsapp.HealthExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/whatsapp/HealthExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "listAgentStatuses",
+    "method": "GET",
+    "path": "/agent_statuses",
+    "key": "examples.operations.switchapi.ListAgentStatusesExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListAgentStatusesExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "getAnnouncements",
+    "method": "GET",
+    "path": "/announcements",
+    "key": "examples.operations.switchapi.ListAnnouncementsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListAnnouncementsExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "get_v2_blacklists",
+    "method": "GET",
+    "path": "/v2/blacklists",
+    "key": "examples.operations.sms.ListBlacklistEntriesExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/ListBlacklistEntriesExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "listBlockedNumbers",
+    "method": "GET",
+    "path": "/blocked_numbers",
+    "key": "examples.operations.switchapi.ListBlockedNumbersExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListBlockedNumbersExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "getCallerIds",
+    "method": "GET",
+    "path": "/caller_ids",
+    "key": "examples.operations.switchapi.ListCallerIdsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListCallerIdsExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "getCdrs",
+    "method": "GET",
+    "path": "/cdrs",
+    "key": "examples.operations.switchapi.ListCdrsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListCdrsExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "listContactGroups",
+    "method": "GET",
+    "path": "/contact_groups",
+    "key": "examples.operations.switchapi.ListContactGroupsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListContactGroupsExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "listContacts",
+    "method": "GET",
+    "path": "/contacts",
+    "key": "examples.operations.switchapi.ListContactsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListContactsExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "listExtensions",
+    "method": "GET",
+    "path": "/extensions",
+    "key": "examples.operations.switchapi.ListExtensionsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListExtensionsExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "listFaxOrders",
+    "method": "GET",
+    "path": "/fax_orders",
+    "key": "examples.operations.switchapi.ListFaxOrdersExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListFaxOrdersExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "listFdrs",
+    "method": "GET",
+    "path": "/fdrs",
+    "key": "examples.operations.switchapi.ListFaxRecordsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListFaxRecordsExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "get_v2_inbound_messages",
+    "method": "GET",
+    "path": "/v2/inbound_messages",
+    "key": "examples.operations.sms.ListInboundMessagesExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/ListInboundMessagesExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "get_v2_iys_campaigns_id_consents",
+    "method": "GET",
+    "path": "/v2/iys/campaigns/{id}/consents",
+    "key": "examples.operations.sms.ListIysCampaignConsentsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/ListIysCampaignConsentsExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "get_v2_iys_campaigns",
+    "method": "GET",
+    "path": "/v2/iys/campaigns",
+    "key": "examples.operations.sms.ListIysCampaignsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/ListIysCampaignsExample.java"
+    }
+  },
+  {
+    "product": "whatsapp",
+    "operationId": "list_messages_v1_messages_get",
+    "method": "GET",
+    "path": "/v1/messages",
+    "key": "examples.operations.whatsapp.ListMessagesExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/whatsapp/ListMessagesExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "getQueuesPending",
+    "method": "GET",
+    "path": "/queues/pending",
+    "key": "examples.operations.switchapi.ListQueuePendingCallsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListQueuePendingCallsExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "getQueueUserList",
+    "method": "GET",
+    "path": "/queue/user_list",
+    "key": "examples.operations.switchapi.ListQueueUsersExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListQueueUsersExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "getQueues",
+    "method": "GET",
+    "path": "/queues",
+    "key": "examples.operations.switchapi.ListQueuesExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListQueuesExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "get_v2_headers",
+    "method": "GET",
+    "path": "/v2/headers",
+    "key": "examples.operations.sms.ListSenderIdsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/ListSenderIdsExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "listUserStatuses",
+    "method": "GET",
+    "path": "/user_statuses",
+    "key": "examples.operations.switchapi.ListUserStatusesExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListUserStatusesExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "getVoicemailMessages",
+    "method": "GET",
+    "path": "/voicemail_messages",
+    "key": "examples.operations.switchapi.ListVoicemailMessagesExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ListVoicemailMessagesExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "manageQueueUsers",
+    "method": "GET",
+    "path": "/queue/manage_users",
+    "key": "examples.operations.switchapi.ManageQueueUsersExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/ManageQueueUsersExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "originateCallPost",
+    "method": "POST",
+    "path": "/originate",
+    "key": "examples.operations.switchapi.OriginateExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/OriginateExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "originateCall",
+    "method": "GET",
+    "path": "/originate",
+    "key": "examples.operations.switchapi.OriginateLegacyExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/OriginateLegacyExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "sendSmsJson",
+    "method": "POST",
+    "path": "/v2/send.json",
+    "key": "examples.operations.sms.SendExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/SendExample.java"
+    }
+  },
+  {
+    "product": "whatsapp",
+    "operationId": "send_bulk_v1_messages_bulk_post",
+    "method": "POST",
+    "path": "/v1/messages/bulk",
+    "key": "examples.operations.whatsapp.SendBulkExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/whatsapp/SendBulkExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "get_v2_send",
+    "method": "GET",
+    "path": "/v2/send",
+    "key": "examples.operations.sms.SendLegacyExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/SendLegacyExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "sendOtp",
+    "method": "POST",
+    "path": "/v2/otp",
+    "key": "examples.operations.sms.SendOtpExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/SendOtpExample.java"
+    }
+  },
+  {
+    "product": "whatsapp",
+    "operationId": "send_otp_v1_messages_otp_post",
+    "method": "POST",
+    "path": "/v1/messages/otp",
+    "key": "examples.operations.whatsapp.SendOtpExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/whatsapp/SendOtpExample.java"
+    }
+  },
+  {
+    "product": "whatsapp",
+    "operationId": "send_utility_v1_messages_utility_post",
+    "method": "POST",
+    "path": "/v1/messages/utility",
+    "key": "examples.operations.whatsapp.SendUtilityExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/whatsapp/SendUtilityExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "muteCall",
+    "method": "GET",
+    "path": "/mute/{id}",
+    "key": "examples.operations.switchapi.SetCallMuteExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/SetCallMuteExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "createDnd",
+    "method": "GET",
+    "path": "/dnd/{id}",
+    "key": "examples.operations.switchapi.SetDndExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/SetDndExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "getSmsStatus",
+    "method": "GET",
+    "path": "/v2/status",
+    "key": "examples.operations.sms.StatusExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/StatusExample.java"
+    }
+  },
+  {
+    "product": "sms",
+    "operationId": "post_v2_iys_consents_json",
+    "method": "POST",
+    "path": "/v2/iys_consents.json",
+    "key": "examples.operations.sms.SubmitIysConsentsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/sms/SubmitIysConsentsExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "transferCallPost",
+    "method": "POST",
+    "path": "/transfer",
+    "key": "examples.operations.switchapi.TransferExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/TransferExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "transferCall",
+    "method": "GET",
+    "path": "/transfer/{id}",
+    "key": "examples.operations.switchapi.TransferLegacyExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/TransferLegacyExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "updateAnnouncement",
+    "method": "PATCH",
+    "path": "/announcements/{id}",
+    "key": "examples.operations.switchapi.UpdateAnnouncementExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/UpdateAnnouncementExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "updateContact",
+    "method": "PATCH",
+    "path": "/contacts/{id}",
+    "key": "examples.operations.switchapi.UpdateContactExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/UpdateContactExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "updateContactGroup",
+    "method": "PATCH",
+    "path": "/contact_groups/{id}",
+    "key": "examples.operations.switchapi.UpdateContactGroupExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/UpdateContactGroupExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "updateCrmIntegrations",
+    "method": "POST",
+    "path": "/crm_integrations",
+    "key": "examples.operations.switchapi.UpdateCrmIntegrationsExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/UpdateCrmIntegrationsExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "updateIvrCampaign",
+    "method": "PATCH",
+    "path": "/ivr_campaigns/{id}.json",
+    "key": "examples.operations.switchapi.UpdateIvrCampaignExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/UpdateIvrCampaignExample.java"
+    }
+  },
+  {
+    "product": "switch",
+    "operationId": "updateOutboundCallerId",
+    "method": "GET",
+    "path": "/update_outbound_caller_id",
+    "key": "examples.operations.switchapi.UpdateOutboundCallerIdExample",
+    "files": {
+      "java": "examples/src/main/java/examples/operations/switchapi/UpdateOutboundCallerIdExample.java"
+    }
+  }
+]

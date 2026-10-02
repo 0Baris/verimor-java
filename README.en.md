@@ -16,7 +16,7 @@ Maven:
 <dependency>
   <groupId>io.github.0baris</groupId>
   <artifactId>verimor</artifactId>
-  <version>0.2.1</version>
+  <version>0.3.0</version>
 </dependency>
 ```
 
@@ -70,6 +70,12 @@ The packages carry JSR-305 annotations; with `-Xjsr305=strict` Kotlin sees real 
 - The default timeout is 30 seconds; the SDK never retries a request.
 - Pass your own `HttpClient` with `httpClient(...)`; the SDK never closes it or changes its settings.
 - Non-2xx responses raise `VerimorApiException`, unexpected 2xx bodies raise `UnexpectedResponseException`. Network failures and timeouts stay `IOException` (for example `HttpTimeoutException`).
+
+## Examples
+
+Every one of the 72 operations has a runnable example under [`examples/src/main/java/examples/operations/`](examples/src/main/java/examples/operations/); each class has its own `main`. Each file reads credentials from environment variables and the server from `VERIMOR_BASE_URL`, falling back to Verimor's server. `scripts/run_examples.py` runs all of them against a local recording server and never contacts Verimor.
+
+A single-file reference for AI assistants: [`llms.md`](llms.md).
 
 ## Documentation
 
