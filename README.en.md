@@ -16,7 +16,7 @@ Maven:
 <dependency>
   <groupId>io.github.0baris</groupId>
   <artifactId>verimor</artifactId>
-  <version>0.2.0</version>
+  <version>0.2.1</version>
 </dependency>
 ```
 

@@ -4,7 +4,7 @@ Each product has its own options class; credentials are required in the construc
 
 | Method | Meaning |
 | --- | --- |
-| `baseUri(URI)` | Overrides the product's default address (for example a local test server). |
+| `baseUri(URI)` | Server address. Defaults to Verimor's address for the product; set it to use another server such as a proxy. An IP, a port and a path prefix are kept. |
 | `timeout(Duration)` | Per-request time limit; 30 seconds by default. Zero or negative values are rejected. |
 | `httpClient(HttpClient)` | A client you own (proxy, TLS, executor). The SDK never closes it or changes its settings. |
 
